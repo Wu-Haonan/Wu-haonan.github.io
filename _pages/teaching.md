@@ -9,6 +9,8 @@ nav_order: 3
 
 # Talks
 
+- [Genome Informatics 2025](https://meetings.cshl.edu/abstracts.aspx?meet=INFO&year=25), Cold Spring Harbor Laboratory, NY, USA. 
+  
 - [WABI 2025](https://wabiconf.github.io/2025/talks/talk16/), University of Maryland, MD, USA
   
 - Graphs and Digraphs, School of Mathematics, SDU, China, Spring 2022
