@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-expectation-of-absolute-distance-in-random-walk",
+        },{id: "post-fastga-fast-genome-alignment",
+        
+          title: "FastGA -- fast genome alignment",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/FastGA/";
+          
+        },
+      },{id: "post-expectation-of-absolute-distance-in-random-walk",
         
           title: "Expectation of absolute distance in Random walk",
         
