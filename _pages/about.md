@@ -33,10 +33,10 @@ Previously, I obtained my M.S. in [Operations Research (OR)](https://www.math.sd
 
 # Research interests
 
-I am interested in developing algorithms/tools/theories for bioinformatics and addressing biological problems via these methods. So, I aim to 
+I am interested in developing theories/algorithms/tools for bioinformatics and addressing biological problems via these methods. So, I aim to 
 
 1. Design methods with solid math/algorithms or at least mathematical intuition.
 2. Build practically useful tools with heuristics benefiting the bio/bioinfo communities. 
 
-Currently, I am working on estimating distance by an alignment-free method and building theories behind common heuristics applied in alignment tools.   
+Currently, I am working on theories and estimators of mutation and evolutionary processes based on $k$-mers, particularly on repetitive genomic sequences.
 
