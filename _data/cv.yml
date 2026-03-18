@@ -32,6 +32,21 @@
         - GPA&#58; 90.65/100
         - Relevant Coursework&#58; Biochemistry, Cell Biology, Molecular Biology
 
+- title: Statements
+  type: map
+  contents:
+    - name: Teaching Statement
+      value: >
+        <a href="/assets/pdf/Teaching_Statement.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-pdf"></i> PDF
+        </a>
+    - name: Research Statement
+      value: >
+        <a href="/assets/pdf/Research_Statement.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-pdf"></i> PDF
+        </a>
+
+
 # - title: Experience
 #   type: time_table
 #   contents:
