@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CentromereArchitect: inference and analysis of the architecture of centromeres
+title: CentromereArchitect--inference and analysis of the architecture of centromeres
 tags: centromere, Monomer, HOR
 categories: paper, centromere_algorithms
 toc:
@@ -56,4 +56,4 @@ However, the challenge of properly defining the set of all human monomers remain
 MonomerGenerator takes a string Centromere and two parameters: a threshold $maxResolvedDivergence$, and a string $InitialMonomer$ as input. It is an iterative algorithm that gradually extends the monomer-set, starting with the monomer-set that consists of a single monomer $InitialMonomer$. In the case of the human genome, it sets $InitialMonomer = ConsensusMonomer$, which is a consensus alpha-satellite monomer in the human genome. 
 
 1. Given a string *Centromere* and a monomer-set $Monomers$, MonomerGenerator launches StringDecomposer to generate the block-set $Blocks(Centromere, Monomers)$ and constructs the **block-graph** where vertices are unresolved blocks and edges connect unresolved blocks with divergence below $maxResolvedDivergence/2$. Note: To speed up the construction of connected components of the block-graph, they use a fast greedy algorithm. Given an arbitrary vertex $v$ in the block-graph, we compute its distance to all other vertices. Given the ranked list of all vertices in the increasing order of distances from $v$, we quickly generate $component(v)$ by starting with a single vertex $v$ and gradually adding more vertices by scanning this list. Therefore, if a vertex $w$ has already been added to $component(v)$, a necessary condition that $u \in component(v)$ is $d(v,u) \leq d(v,w)+d(w,u) \leq d(v,w) + maxResolvedDivergence/2$​. Using this necessary condition, we only need to analyze vertices with the distance. 
-2. MonomerGenerator selects a largest connected component in the constructed block-graph and computes its consensus *newMonomer* by constructing the multiple alignment of all blocks (vertices) in this component using Clustal Omega. Afterward, MonomerGenerator extends the monomer-set by adding *newMonomer* and iterates until the monomer-set resolves $Centromere$. 
+2. MonomerGenerator selects a **largest connected component** in the constructed block-graph and computes its consensus *newMonomer* by constructing the **multiple alignment** of all blocks (vertices) in this component using Clustal Omega. Afterward, MonomerGenerator extends the monomer-set by adding *newMonomer* and iterates until the monomer-set resolves $Centromere$. It also removes a monomer from the monomer-set if it does not represent the most similar monomer for any block in $Blocks(Centromere, Monomers)$.
