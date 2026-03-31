@@ -44,15 +44,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-",
+        },{id: "post-centromerearchitect-inference-and-analysis-of-the-architecture-of-centromeres",
         
-          title: "",
+          title: "CentromereArchitect--inference and analysis of the architecture of centromeres",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-03-30-CentromereArchitect/";
+            window.location.href = "/blog/2026/CentromereArchitect/";
           
         },
       },{id: "post-fastga-fast-genome-alignment",
