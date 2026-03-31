@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-fastga-fast-genome-alignment",
+        },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2026-03-30-CentromereArchitect/";
+          
+        },
+      },{id: "post-fastga-fast-genome-alignment",
         
           title: "FastGA -- fast genome alignment",
         
