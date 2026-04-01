@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CentromereArchitect--inference and analysis of the architecture of centromeres
-tags: centromere, Monomer, HOR
-categories: paper, centromere_algorithms
+tags: centromere Monomer HOR
+categories: paper centromere_algorithms
 toc:
   sidebar: left
 ---
@@ -35,7 +35,7 @@ However, the challenge of properly defining the set of all human monomers remain
 
 # Methods
 
-## Definitions and notations
+## Definitions and notations of MonomerGenerator
 
 1. We refer a decomposed block-set as $Blocks(Centromere, Monomers)$
 2. The **divergence** between a pair of strings is defined as the edit distance between them divided by the length of the longest string.
@@ -47,7 +47,7 @@ However, the challenge of properly defining the set of all human monomers remain
 8. The **radius** of a monomer $M$, referred to as $radius(M)$, is defined as the maximum edit distance between its $M$-consensus and all $M$-blocks. 
 9. **The separation ratio** of a monomer $M$​ is defined as $separationRatio(M) = separation(M)/radius(M)$​.
 10. The **count** of a monomer $M$​, referred to as $count(Centromere, M)$​ is defined as the number of $M$​-blocks in $Blocks(Centromere, Monomers)$​. 
-11. A monomer is classified as **frequent** if its count exceeds the threshold $ |Blocks(Centromere, Monomers)|/FreqCeiling$​ (default value $FreqCeiling = 40$​), and **infrequent**, otherwise. An infrequent monomer is classified as **rare** if its count does not exceed a threshold $rareMonomerCount$​ (default value $rareMonomerCount = 5$​).
+11. A monomer is classified as **frequent** if its count exceeds the threshold $ \vert Blocks(Centromere, Monomers) \vert /FreqCeiling$​ (default value $FreqCeiling = 40$​), and **infrequent**, otherwise. An infrequent monomer is classified as **rare** if its count does not exceed a threshold $rareMonomerCount$​ (default value $rareMonomerCount = 5$​).
 12. We classify a block *Block* as 1) **resolved** if $div_1(Block)$​ is below the threshold $maxResolvedDivergence$​ (default value $maxResolvedDivergence= 5 \%$​); 2) **non-monomeric** if $div_1(Block)$​ exceeds the threshold $maxDivergence$​ (default value $maxDivergence = 40\%$​); 3) **unresolved** if it is neither resolved nor non-monomeric.
 13. We say that a monomer-set **Monomers resolves** a centromere *Centromere* if the fraction of resolved blocks in this centromere exceeds the threshold $FractionResolvedBlocks$ and all other blocks are non-monomeric (default value $FractionResolvedBlocks = 0.95$). Given an integer $Length$, we say that a monomer-set is **Length-uniform** if all monomers in this set have a length similar to *Length*, i.e. that differs from *Length* by at most $MaxLengthDivergence$, where $MaxLengthDivergence$ is a parameter (the default value is $0.01 \times Length$).
 
@@ -56,4 +56,33 @@ However, the challenge of properly defining the set of all human monomers remain
 MonomerGenerator takes a string Centromere and two parameters: a threshold $maxResolvedDivergence$, and a string $InitialMonomer$ as input. It is an iterative algorithm that gradually extends the monomer-set, starting with the monomer-set that consists of a single monomer $InitialMonomer$. In the case of the human genome, it sets $InitialMonomer = ConsensusMonomer$, which is a consensus alpha-satellite monomer in the human genome. 
 
 1. Given a string *Centromere* and a monomer-set $Monomers$, MonomerGenerator launches StringDecomposer to generate the block-set $Blocks(Centromere, Monomers)$ and constructs the **block-graph** where vertices are unresolved blocks and edges connect unresolved blocks with divergence below $maxResolvedDivergence/2$. Note: To speed up the construction of connected components of the block-graph, they use a fast greedy algorithm. Given an arbitrary vertex $v$ in the block-graph, we compute its distance to all other vertices. Given the ranked list of all vertices in the increasing order of distances from $v$, we quickly generate $component(v)$ by starting with a single vertex $v$ and gradually adding more vertices by scanning this list. Therefore, if a vertex $w$ has already been added to $component(v)$, a necessary condition that $u \in component(v)$ is $d(v,u) \leq d(v,w)+d(w,u) \leq d(v,w) + maxResolvedDivergence/2$​. Using this necessary condition, we only need to analyze vertices with the distance. 
-2. MonomerGenerator selects a **largest connected component** in the constructed block-graph and computes its consensus *newMonomer* by constructing the **multiple alignment** of all blocks (vertices) in this component using Clustal Omega. Afterward, MonomerGenerator extends the monomer-set by adding *newMonomer* and iterates until the monomer-set resolves $Centromere$. It also removes a monomer from the monomer-set if it does not represent the most similar monomer for any block in $Blocks(Centromere, Monomers)$.
+
+2. MonomerGenerator selects a **largest connected component** in the constructed block-graph and computes its consensus *newMonomer* by constructing the **multiple alignment** of all blocks (vertices) in this component using Clustal Omega. Afterward, MonomerGenerator extends the monomer-set by adding *newMonomer* and iterates until the monomer-set resolves $Centromere$. It also removes a monomer from the monomer-set if it does not represent the most similar monomer for any block in $Blocks(Centromere, Monomers)$​.
+
+3. Before launching the next iteration, MonomerGenerator **recomputes** the sequence of each monomer in the monomer-set by substituting it with the **consensus of all blocks resolved by this monomer**. In the resolved centromere, the $M$-consensus coincides with each monomer $M$ in the generated monomer-set. Even though the final monomer-set is not guaranteed to be *Length-uniform*, it is not an issue for human centromeres, since most monomers in the human genome have a rather conserved length of $\approx171$​.
+   ### Identification of hybrid monomers
+
+   Given a string, we refer to a string formed by its first (last) $i$ nucleotides as its $i$-prefix ($i$-suffix). We refer to a **hybrid monomer** formed by concatenating the $i$-prefix of a monomer $X$ and the $j$-suffix of a monomer $Y$ as the $X(i)+Y(j)$, or simply $X + Y$, when omitting the indices $i$ and $j$ does not cause confusion. For each **infrequent monomer** $M$, MonomerGenerator identifies the most similar hybrid candidate generated by a pair of frequent monomers $(X,Y)$ and reports $M$ as a hybrid monomer if $div(M, X + Y)$ does not exceed $MaxHybridDivergence$ (default value $1\%$​).
+
+   ### Shifted monomer-set
+
+   A unit of a tandem repeat is defined up to a **cyclic shift**. For example, AGGT, GGTA, GTAG and TAGG represent four cyclic shifts for a tandem repeat $\cdots AGGTAGGTAGGT \cdots$. To facilitate the comparison of the arbitrary monomer-sets (possibly with different shifts) MonomerGenerator has the **MonomerGraph** module that, given a monomer-set and a centromere, generates a shifted monomer-set.
+
+## Definitions and notations of HOR inference problem
+
+We define a HOR as a string in a monomer alphabet. 
+
+1. We denote the length of a string $S$ as $\vert S \vert$, the number of elements in a set $A$ as $\vert A \vert$ and the total length of strings in a string-set $Strings$ as $length(Strings)$.
+2. Given a string-set $Strings$, an arbitrary concatenate of strings from this set is called a **String-word**. For example, if $Strings =\{AB, CD, BD\}$, $ABBDCDAB$ is a *Strings*-word. We refer to the total number of strings from $Strings$ that form a *Strings-*word *w* as $orbit(w)$. For a *Strings*-word $w = ABBDCDAB$, $\vert w \vert =8$ and $orbit(w) = 4$​. 
+3. A *Strings*-word $w$ is called a **Strings-decomposition** of a string $S$ if $w = S$. The score of this *Strings*-decomposition $score(Strings, w)$ is defined as $orbit(w)+length(Strings)$. 
+4. Given a string $S$, a string-set $Strings$ is called **S-minimal** if there exists a *Strings*-decomposition $w$ of $S$ that minimizes $score(Strings, w)$ over all string-sets $Strings$ and over all *Strings*-decompositions of $S$. 
+5. The elements of the *S*-minimal string-set are called **HORs.** We formulate the following HOR inference problem and note that it may have multiple solutions.
+6. Given a substring $h$ of a string $S$, we define $count_S(h)$ as the number of non-overlapping occurrences of $h$ in $S$. There may be multiple ways to select $count_S(h)$ non-overlapping occurrences of $h$ in $S$, e.g. $count_{AABBCAAAD}(AA) = 2$ and there are two ways to select two non-overlapping occurrences of $AA$ in $AABBCAAAD$: <u>AA</u>BBC<u>AA</u>AD and <u>AA</u>BBCA<u>AA</u>D. HORDecomposer selects the set of the ‘leftmost’ occurrences.
+7. A string is called a **monorun** if it is made of a single symbol. A substring of a string is called a **run** if it is a maximal monorun, i.e. is not a substring of another monorun. For example, ABBCAAAD has two runs of A. The **run-length encoding** of a string $S$ (denoted as $S^\star$) is defined as the substitution of each run of a symbol $X$ of length $n$ by an expression $X^n$ that we count as a single symbol. For example, the run-length encoding of $S = ABBCAAAD$ is $S^\star =AB^2CA^3D$, $\vert S\vert = 8$ and $\vert S^\star\vert = 5$.
+
+## HORDecomposer algorithm
+
+
+
+# Results
+
