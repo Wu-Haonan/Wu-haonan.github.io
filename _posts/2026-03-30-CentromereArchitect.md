@@ -82,7 +82,21 @@ We define a HOR as a string in a monomer alphabet.
 
 ## HORDecomposer algorithm
 
+**String substitution**. Given a substring $h$ of a string $S$, we define its **$h$-substitution** as a string $S(h)$ resulting from substituting each of non-overlapping occurrences of $h$ in $S$ by a new symbol $h$. For example, if $h=AB$, $g=EGF$ and $S = CABDEGFABEGFBDEGFABDEGFDABABDD$ with $\vert S \vert =30$, $S(h) = ChDEGFhEGFBDEGFhDEGFDhhDD = ChDEGFhEGFBDEGFhDEGFDh^2D^2$ and $S(g) = CABDgABgBDgABDgDABABDD$. 
+
+Add $h$ to the alphabet $A$ forms a string-set $Strings$. The $h$-substitution operation results in a *Strings*-decomposition *w* of $S(h)$ with $score(Strings, w) =  score(A, w) - count_S(h) \times (\vert h \vert -1) + \vert h \vert$. Hence, we can find substring $h$ to minimizing $score$.
+
+**Heavy substrings.** A substring $h$ of a string $S$ is called **recurrent** if $count_S(h)$ exceeds a threshold $MinCount$ (default value $MinCount = 5$). A string is called **short** if its length does not exceed a threshold $MaxLength$ (the default value is $30$). Below we limit attention to **short recurrent** strings $h$ and consider their $h$-substitutions. We define the **weight** $weight(S, h)$ of a substring $h$ as $\vert S^\star \vert- \vert S(h)^\star \vert$. A string $h$ is called **heavy** if its weight exceeds a threshold $MinWeight$ (default value $MinWeight = 5$).
+
+A string is called **non-trivial** if it consists of at least two different symbols. We define a **HOR** in a string $S$ as its **recurrent heavy non-trivial substring** $h$ that <u>minimizes run-length encoding</u> of $h$-substitution of $S$ over all recurrent heavy non-trivial substrings with **at least one symbol (monomer)** from the initial string *S* (ties are broken arbitrarily). The restriction that a new HOR has to include at least one monomer implies that we do not consider HORs formed by the previously constructed HORs. 
+An example: $S=CABDEGFABEGFBDEGFABDEGFDABABDD$ and run HORDecomposer with parameters $MaxLength = 30, MinCount= 1$ and $MinWeight = 10$​. 
+
+1. selects a HOR $a = EGF$, $S' = S(a) = CABDaABaBDaABDaDABABDD$
+2. selects a HOR $b = AB$, resulting in a string $S'' = S'(b) = CbDabaBDabDaDbbDD$
+3. selects a HOR $c = Da$, resulting in a string $S''' = S″(c) = CbcbaBcbcDbbDD = CbcbaBcbcDb^2D^2$
+4. Note $d = bc$ is not a HOR, because it does not contain monomers from the initial string $S$. 
+
+**superHORs.** Each element in the HOR decomposition has a form $H^n$, where $H$ is a HOR and $n$ is its **degree**, i.e. the number of tandem repeats of this HOR starting at a given position in a monocentromere. To derive a **superHORs decomposition**, we ignore all degrees in the HOR decomposition (e.g. a string $CbcbaBcbcDb^2D^2$ is transformed into $CbcbaBcbcDbD$) and apply the HORDecomposer algorithm to the resulting string (albeit with the changed default parameters *MinCount = 2*, and *MinWeight = 2*). The resulting HORs are classified as **superHORs** (e.g. a superHOR bc in $CbcbaBcbcDbD$). An example of a string $ga^3ga^{15}ga^6ga^4ga^5ga^{39}$ (a substring of the HOR decomposition of cenX) explains why we ignore the degrees in the definition of a superHOR. Indeed, $g^na^m$ (for all possible values of *n* and *m*) is a compact representation of all six strings $ga^3$, $ga^{15}$, $ga^6$, $ga^4$, $ga^5$ and $ga^{39}$.
 
 
-# Results
 
