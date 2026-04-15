@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-centromerearchitect-inference-and-analysis-of-the-architecture-of-centromeres",
+        },{id: "post-automated-annotation-of-human-centromeres-with-hormon",
+        
+          title: "Automated annotation of human centromeres with HORmon",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/HORmon/";
+          
+        },
+      },{id: "post-centromerearchitect-inference-and-analysis-of-the-architecture-of-centromeres",
         
           title: "CentromereArchitect--inference and analysis of the architecture of centromeres",
         
