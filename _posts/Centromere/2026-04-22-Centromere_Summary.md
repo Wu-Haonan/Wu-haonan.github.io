@@ -20,7 +20,7 @@ Human centromeres are organized as megabase-scale arrays of alpha-satellite **hi
 __Fig.1 CHM13 methylation in the centromeric region of chromosome 5. Smoothed methylation frequency is plotted in 10-kb bins. HOR arrays are annotated as blue (“active”) and pink (“inactive”).[^1].__
 
 <p align="center">
-    <img src="/assets/img/Centromere_sum/CDP_CENP-A.jpg" width="100%">
+    <img src="/assets/img/Centromere_sum/CDP_CENP-A.png" width="100%">
 </p>
 __Fig.2 Smoothed methylation frequency in 10-kb bins of the active HOR array for all CHM13 chromosomes. CENP-A enrichment from CUT&RUN data is shown as a heatmap under each plot. Chromosomes 3 and 4 have an HSat1 repeat (blue highlight) that breaks up the live HOR array.[^1].__
 
