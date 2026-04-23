@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-automated-annotation-of-human-centromeres-with-hormon",
+        },{id: "post-summary-for-latest-studies-on-centromere-evolution-and-mutation",
+        
+          title: "Summary for Latest studies on Centromere Evolution and Mutation",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Centromere_Summary/";
+          
+        },
+      },{id: "post-automated-annotation-of-human-centromeres-with-hormon",
         
           title: "Automated annotation of human centromeres with HORmon",
         
