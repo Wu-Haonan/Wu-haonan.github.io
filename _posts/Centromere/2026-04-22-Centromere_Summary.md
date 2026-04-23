@@ -34,8 +34,10 @@ So, I **tentatively claim** that most recent expanded HOR has the least intra-ar
 
 Gao et al.[^2] leveraged genome assemblies from a four-generation pedigree that had been recently generated to validate centromere mutation rates. The lowest mutation rate occurs in the unique sequences in the pericentromere (7.1×10-8 Ms/bp/G), while the monomeric/divergent α-satellite HORs have a slightly higher mutation rate (1.1×10-7 Ms/bp/G), and the active α-satellite HORs have a mutation rate 2.6×10-7 Ms/bp/G. Within the active α-satellite HOR array itself, we find that the CDR has the highest mutation rate (5.1×10-7 Ms/bp/G). For *de novo* SVs, they believe that elevated SV mutation rate in the CDR may reflect the higher sequence identity of these regions, which are more prone to homologous recombination, leading to expansions and deletions, relative to less identical sequences.
 
-
-
+<p align="center">
+    <img src="/assets/img/Centromere_sum/Unified_model.jpg" width="100%">
+</p>
+__Fig.3 Model of centromere mutation and evolution, showing that the CDR is often located within the most identical and homogenous sequences of the centromere and is prone to both SNVs and SVs that alter the genetic and epigenetic landscape of the centromere over time.[^2].__
 # Structural mutations remodel both the genetic and epigenetic landscape
 
 Variation within α-satellite organization negatively affects centromere assembly and function. If variant and wild-type HORs are interspersed across the entire array, the irregularity might disrupt structural requirements for kinetochore architecture, such as CENP-C-mediated bridging between nucleosomes[^5].
@@ -49,6 +51,8 @@ In extreme cases—when the most homogeneous region of the active array is disru
 The centromere paradox is the evolutionary enigma where centromeric DNA sequences and their associated proteins evolve rapidly, yet their essential function—proper chromosome segregation during cell division—remains highly conserved [^9]. 
 
 To answer centromere paradox, Gao et al.'s [^2]findings provide the foundation for a unified model in which (i) kinetochores preferentially form on homogenous stretches of α-satellite HORs; (ii) those stretches are prone to elevated rates of homologous recombination and structural change because their sequence identity promotes misalignment and unequal exchange; and (iii) such genetic changes feed back on chromatin state and kinetochore localization, producing continual shifts in centromere architecture across generations (an evolutionary “treadmill” of DNA-protein interactions). 
+
+
 
 # How to choose favorable HOR
 
