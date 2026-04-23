@@ -14,7 +14,7 @@ toc:
 Human centromeres are organized as megabase-scale arrays of alpha-satellite **higher-order repeats (HORs)**. Centromeres can contain multiple distinct alpha satellite HOR arrays that can be classified into **active** and **inactive** HORs. **Centromere protein A (CENP-A)** is an H3 variant that is enriched in centromeric nucleosomes and marks sites of kinetochore assembly. Centromeres are typically hypermethylated throughout the active HOR array. But in some small regions, snotable hypomethylation is colocalizing with CENP-A enrichment and we refer this hypomethylation as the **centromeric dip region (CDR)** (Fig. 2). CDRs are present only in active HORs, and that active HORs were larger in size and had higher mean methylation frequency than inactive HORs, as exemplified by the chromosome 5 centromere (Fig. 1). The CDR and CENP-A occupancy are tightly correlated and together define the functional kinetochore site [^1].
 
 <p align="center">
-    <img src="/assets/img/Centromere_sum/CDP_HOR_active.jpg" width="30%">
+    <img src="/assets/img/Centromere_sum/CDP_HOR_active.jpg" width="70%">
 </p>
 
 __Fig.1 CHM13 methylation in the centromeric region of chromosome 5. Smoothed methylation frequency is plotted in 10-kb bins. HOR arrays are annotated as blue (“active”) and pink (“inactive”).[^1].__
@@ -68,9 +68,6 @@ While meiosis is symmetrical in males, resulting in four gametes, in most plants
 
 (*c*) the old centromere abandoned by the kinetochore degrades (deletions, inversions, TE insertions, HSat expansions, and hypermutability) [^4].
 
-
-
-# Genome-wide evidence of layered expansions in centromeric arrays
 
 # Reference
 
