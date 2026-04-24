@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi guys! I am a Ph.D. student in [Computer Science and Engineering](https://www.eecs.psu.edu/) at [Penn State](https://www.psu.edu/), under the supervision of [Dr. Paul Medvedev](https://medvedevgroup.com/principal-investigator/). 
+Hi guys! I am a Ph.D. Candidate in [Computer Science and Engineering](https://www.eecs.psu.edu/) at [Penn State](https://www.psu.edu/), under the supervision of [Dr. Paul Medvedev](https://medvedevgroup.com/principal-investigator/). 
 
 Previously, I obtained my M.S. in [Operations Research (OR)](https://www.math.sdu.edu.cn/English/Introduction.htm) and B.S. in [Biotechnology](https://mc.wh.sdu.edu.cn/ENGLISH/Introduction.htm) at [Shandong University](https://www.en.sdu.edu.cn/). 
 
