@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-summary-for-latest-studies-on-centromere-evolution-and-mutation",
+        },{id: "post-how-to-write-introduction-and-results",
+        
+          title: "How to Write Introduction and Results",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Writting_intro_results/";
+          
+        },
+      },{id: "post-summary-for-latest-studies-on-centromere-evolution-and-mutation",
         
           title: "Summary for Latest studies on Centromere Evolution and Mutation",
         
