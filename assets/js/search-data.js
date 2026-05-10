@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-how-to-write-introduction-and-results",
+        },{id: "post-momonmer-types-suprachromosomal-families-sfs-and-hors-identification",
+        
+          title: "Momonmer Types, Suprachromosomal Families (SFs) and HORs Identification",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Centromere_ground_truth/";
+          
+        },
+      },{id: "post-how-to-write-introduction-and-results",
         
           title: "How to Write Introduction and Results",
         
