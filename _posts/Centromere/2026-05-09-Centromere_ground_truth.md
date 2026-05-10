@@ -28,9 +28,9 @@ Centromere expansion **likely** goes in waves of interchromosomal transfer and a
 <p align="center">
     <img src="/assets/img/Centromere_Ground_truth/structure_human_cen_regions.jpg" width="50%">
 </p>
-__Fig 1. General genomic structure of a human centromeric region, which includes one homogeneous core made of chromosome-specific HORs (*red*) and the imperfect symmetrical organization of smaller arrays of various other homogeneous HORs [**pseudocentromeres or inactive HOR arrays** (*light gray*)], **divergent HORs** [recent relic centromeres (*dark gray*)], and multiple distinct **divergent monomeric arrays** (older relic centromeres). These regions typically include other pericentromeric satellite classes [e.g., HSat1–HSat3 (*teal*)] and SDs. The entire centromeric region is defined by those sequences in the cenhap, presented as gray flanking regions extending into the p-arm and q-arm. Arrayed triangles indicate alpha satellite monomers and HORs of various length and structures composed of several different monomers.
+> Fig 1. General genomic structure of a human centromeric region, which includes one homogeneous core made of chromosome-specific HORs (*red*) and the imperfect symmetrical organization of smaller arrays of various other homogeneous HORs [**pseudocentromeres or inactive HOR arrays** (*light gray*)], **divergent HORs** [recent relic centromeres (*dark gray*)], and multiple distinct **divergent monomeric arrays** (older relic centromeres). These regions typically include other pericentromeric satellite classes [e.g., HSat1–HSat3 (*teal*)] and SDs. The entire centromeric region is defined by those sequences in the cenhap, presented as gray flanking regions extending into the p-arm and q-arm. Arrayed triangles indicate alpha satellite monomers and HORs of various length and structures composed of several different monomers. 
 
-## Monomer and Monomer Type
+## Monomer Class and Monomer
 
 The individual monomers within a HOR unit have 50–70% identity and can be distinguished such that HOR unit length is determined by where the next monomer shows nearly total sequence identity to the first monomer in the HOR.
 
@@ -40,8 +40,7 @@ The individual monomers within a HOR unit have 50–70% identity and can be dist
 [^2]: The Evolutionary Origin of Man Can Be Traced in the Layers of Defunct Ancestral Alpha Satellites Flanking the Active Centromeres of Human Chromosomes.
 [^3]: Langley, Sasha A., et al. "Haplotypes spanning centromeric regions reveal persistence of large blocks of archaic DNA." *elife* 8 (2019): e42989.
 [^4]: McNulty, Shannon M., and Beth A. Sullivan. "Alpha satellite DNA biology: finding function in the recesses of the genome." *Chromosome research* 26.3 (2018): 115-138.
-
-
+[^5]: Uralsky, L. I., et al. "Classification and monomer-by-monomer annotation dataset of suprachromosomal family 1 alpha satellite higher-order repeats in hg38 human genome assembly." *Data in brief* 24 (2019): 103708.
 
 
 
