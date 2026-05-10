@@ -26,13 +26,28 @@ Both inactive HOR arrays and divergent arrays are often in the range of a few to
 Centromere expansion **likely** goes in waves of interchromosomal transfer and amplification, where the HORs (or monomeric sequences) of the newly formed novel centromere jump from one live centromere to another and amplify in the **new location** to form the next generation of live centromeres (a centromeric layer) in all chromosomes or in a group of chromosomes. The remnants of the old centromere are displaced sideways, shrink, diverge, and structurally degrade.
 
 <p align="center">
-    <img src="/assets/img/Centromere_Ground_truth/structure_human_cen_regions.jpg" width="50%">
+    <img src="/assets/img/Centromere_Ground_truth/structure_human_cen_regions.jpg" width="70%">
 </p>
-> Fig 1. General genomic structure of a human centromeric region, which includes one homogeneous core made of chromosome-specific HORs (*red*) and the imperfect symmetrical organization of smaller arrays of various other homogeneous HORs [**pseudocentromeres or inactive HOR arrays** (*light gray*)], **divergent HORs** [recent relic centromeres (*dark gray*)], and multiple distinct **divergent monomeric arrays** (older relic centromeres). These regions typically include other pericentromeric satellite classes [e.g., HSat1–HSat3 (*teal*)] and SDs. The entire centromeric region is defined by those sequences in the cenhap, presented as gray flanking regions extending into the p-arm and q-arm. Arrayed triangles indicate alpha satellite monomers and HORs of various length and structures composed of several different monomers. 
 
-## Monomer Class and Monomer
+> <small> Fig 1. General genomic structure of a human centromeric region, which includes one homogeneous core made of chromosome-specific HORs (*red*) and the imperfect symmetrical organization of smaller arrays of various other homogeneous HORs [**pseudocentromeres or inactive HOR arrays** (*light gray*)], **divergent HORs** [recent relic centromeres (*dark gray*)], and multiple distinct **divergent monomeric arrays** (older relic centromeres). These regions typically include other pericentromeric satellite classes [e.g., HSat1–HSat3 (*teal*)] and SDs. The entire centromeric region is defined by those sequences in the cenhap, presented as gray flanking regions extending into the p-arm and q-arm. Arrayed triangles indicate alpha satellite monomers and HORs of various length and structures composed of several different monomers. </small>
+
+<p align="center">
+    <img src="/assets/img/Centromere_Ground_truth/science.abl4178-f1.jpg" width="70%">
+</p>
+
+> <small> Fig 2. Overview of all peri/centromeric regions in CHM13.  </small>
+
+## Monomer Class and Monomer Type
 
 The individual monomers within a HOR unit have 50–70% identity and can be distinguished such that HOR unit length is determined by where the next monomer shows nearly total sequence identity to the first monomer in the HOR.
+
+## SF and A/B type
+
+## HOR and naming system
+
+
+
+# Where does the ground truth come from 
 
 # Reference
 
