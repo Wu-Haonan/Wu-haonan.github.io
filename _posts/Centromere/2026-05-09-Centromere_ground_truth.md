@@ -7,7 +7,7 @@ toc:
   sidebar: left
 ---
 
-In this blog, we will introduce the structure/concepts in centromere study, like monomer types, Suprachromosomal Families (SFs), HORs. What are the modern definitions of these concepts. Then, we will review how biologist studied these structure? In other words, how people identifies these ground truth in centromere. 
+In this blog, we introduce several key concepts in centromere biology, including monomer types, suprachromosomal families (SFs), and higher-order repeats (HORs). We discuss the modern definitions of these structures and the hierarchical organization of human centromeres. We then review how biologists gradually uncovered these patterns through decades of experimental and computational studies, eventually establishing the current structural model of human centromeres.
 
 # Hierarchies in Alpha-Satellite Array
 
@@ -94,7 +94,55 @@ Note:  the examples shown here may be fictional[^5].
 
 The first part of the StV name is the HOR name (e.g. S2C8H1L). Then, after “.” follows a listing of monomer numbers included in StV separated by “\_”. If monomer numbers go in a natural order (or descending natural order for the reverse strand HORs), we join the first and the last monomers in this string with “-” to indicate an interval and do not show the numbers in between (e.g. S3C11H1L.1_2_3 would appear S3C11H1L.1-3). If αSat is on the reverse strand, the monomer numbers go in reverse (e.g. S3CXH1L.1-12 would appear as S3CXH1L.12-1). Hybrids are always flanked by “\_” (e.g. S2C8H1L.1-3_4/7_8-11). Rarely occurring monomers identified as monomers of another HOR or as SF class monomers (usually due to misclassification) are shown by their own name (e.g. S2C15H1L.1-4_S5C1qH6d.2_5-11 or S3C11H1L.1-2_W3_5)[^7].
 
-# Where does the ground truth come from
+# How Centromeric Structures Were Identified
+
+## The Restriction Enzyme Horizon
+
+The first systematic evidence for a higher-order repeat structure in human αSat did not come from sequencing but from restriction enzyme electrophoresis. When total human genomic DNA was digested with enzymes such as EcoRI and BspRI and resolved on agarose gels, characteristic "ladder" patterns were observed: a fundamental band at ~170 bp accompanied by integer multiples (340, 510, 680 bp, and so on). These ladders implied that the periodically spaced restriction sites were themselves part of a larger repeating unit. Wu and Manuelidis first described the sequence definition of one such repeat family in 1980; in situ hybridization experiments confirmed that these sequences were concentrated at the pericentromeric heterochromatin of all human chromosomes, establishing αSat as a centromeric sequence class. Critically, they established the conceptual vocabulary: the ~171 bp monomer was the "monomer," the ladder-generating periodicity implied a "higher-order" structure, and the observation that different chromosomes showed different dominant restriction fragment lengths implied chromosome specificity. All three conclusions were later verified at single-nucleotide resolution, but their logical structure was set in place by gel electrophoresis alone.
+
+## Sanger Sequencing Reveals HOR
+
+In 1985, Waye and Willard published the complete 2.0 kb nucleotide sequence of the X-chromosome centromeric repeat DXZ1, demonstrating that it was a 12-monomer HOR in which individual monomers showed approximately 20–40% divergence from one another yet were arranged in a fixed, tandemly repeated order.
+
+In 1997, Willard and Waye compared the complete nucleotide sequences of 44 individual αSat monomers drawn from the HOR arrays of four chromosomes (1, 11, 17, and X). The 44 monomers exhibit an average 16% divergence from a consensus alphoid sequence, and can be assigned to **five distinct homology groups** based on patterns of sequence substitutions and gaps relative to the consensus. These five homology groups — designated A, B, C, D, and E — were not randomly distributed within individual HOR units; they occurred in a fixed linear order. The paper further demonstrated that this order was conserved across all four chromosomes. The five homology groups A–E of Willard & Waye 1987 map directly onto the monomer nomenclature used today: in the language of Alexandrov et al. 1988 and subsequent works, they correspond to the W1–W5 monomers that define SF3. 
+
+## Cross-Hybridization Defines Three SFs
+
+In 1988, Alexandrov, Mitkevich, and Yurov addressed this systematically by performing in situ hybridization of 18 cloned αSat fragments to human metaphase chromosomes under both stringent and non-stringent conditions. The key insight of this approach was that under stringent conditions each probe hybridized to only one or a few chromosomes (its "home" chromosome-specific family), while under relaxed conditions the hybridization spectrum revealed broader cross-reactive groupings. Comparison of the hybridization spectra obtained under non-stringent conditions and of restriction site periodicities in different chromosome-specific families allowed the identification of three "suprachromosomal" families, each located on a characteristic set of chromosomes. The three families together cover all the autosomes and the X chromosome.
+
+The three-group chromosome assignment that paper established has remained essentially stable. Group 1 (chromosomes 1, 3, 5, 6, 7, 10, 12, 16, 19) became SF1; Group 2 (chromosomes 2, 4, 8, 9, 13, 14, 15, 18, 20, 21, 22) became SF2; Group 3 (chromosomes 11, 17, X) became SF3. The paper also deduced the ancestral periodicity underlying each family from **restriction site analysis**: SF1 dimeric (J1J2), SF2 dimeric (D1D2), SF3 pentameric (W1–W5). 
+
+However, a substantial fraction of αSat sequences from chromosomes 13, 14, 15, 21, 22, and Y did not hybridize strongly to any of the three groups, and their restriction patterns did not fit dimeric or pentameric ancestral periodicities. In 1993, Alexandrov et al. surveyed more than 500 αSat monomers (**sequenced in their laboratory or available in the literature**.) and found that most of them belonged to the well studied SF 1, 2 and 3. But 39 monomers formed a relatively homogenous family, which do not form any ancestral periodicities other than a monomeric one. Then they defined its representative consensus sequence as M1and the newly defined family was termed SF 4.
+
+## The Evolutionary Framework: SF5
+
+The fifth SF (SF5) described in the 2001 paper consists of R1 (B-type) and R2 (A-type) monomers organized in an irregular, non-HOR arrangement. As Shepelev et al. 2009 explain, SF5 represents a transitional state: *"SF5 is formed by two types of monomers, R1 and R2, alternating irregularly. R2 is similar to M1 (class A), and R1 represents the first appearance of novel class B monomers, which bind CENP-B protein and presumably have invaded the A-arrays before the great ape divergence"*
+
+SF5, in this interpretation, is the evolutionary intermediate between the purely monomeric A-type ancestral centromere and the regularly alternating AB-type HOR arrays of SFs 1–3. In the spatial architecture of living human chromosomes, SF5 arrays physically flank the active HOR arrays, reflecting their chronological position: they are the most recently "dead" centromeres, their homogenization having ceased most recently.
+
+## Decoding SF4+
+
+SF4 was previously described as "old" αSat located peripheral to the HOR arrays, but the SF4+ designation became a catch-all for a heterogeneous mixture of sequences with very different ages and primate lineage assignments. 
+
+Using phylogenetic trees of individual αSat monomers from the largely sequenced pericentromeric regions of chromosomes 8, 17, and X, the paper identified distinct monomer clades that each formed compact, contiguous chromosomal domains. Crucially, the study demonstrated that these domains were partially symmetrically arranged around the active HOR array on each chromosome and were shared between non-homologous chromosomes — evidence that each layer represents the remnant of a genome-wide centromere replacement event, rather than chromosome-specific divergence. 
+
+The layer structure was assigned to specific primate lineages using two independent dating methods: L1 retrotransposon content (measuring when homogenization ceased and the sequence became accessible to insertions) and comparative genomics in extant primates. This yielded an age chronology for each layer ranging from approximately 16 Myr (SF5) to over 40 Myr (H4 class), corresponding to centromere generations from before the great ape–gibbon split to before the New World / Old World monkey separation.
+
+## Computational Annotation in the Reference Genome: PERCON, HumAS-HMMER
+
+The release of hg38 in 2014 offered a partial opportunity: for the first time, centromeric gaps in the reference assembly were filled with "reference models" (RMs), described by Miga et al. 2014 (collections of all WGS reads, that match a certain HOR, put into a contig by the stochastic approach of using a generative Markov process). These models were not true linear sequences, but they enabled the first comprehensive genome-wide αSat annotation using the PERCON program, which Shepelev et al. 2015 describe and deploy. 
+
+PERCON operated by a Bayesian classifier that assigned each identified ~171 bp monomer to one of 12 known monomer classes (J1, J2, D1, D2, W1–W5, R1, R2, M1) or designated it unclassified. As Shepelev et al. 2015 describe: "Every monomer was classed into one of the 12 known standard monomer classes or defined as unclassed (Um) or random (Xm) by a simple Bayesian classification procedure that utilized consensus matrices of the 12 classes of monomers together with the random matrix". This approach — classifying each monomer individually against a fixed set of reference consensus sequences — is the methodological core that was subsequently inherited by HumAS-HMMER and ultimately by AS-HMMER-SF in the T2T paper. The PERCON SF-track from hg38 served as the ground-truth reference against which all subsequent computational methods were validated.
+
+In 2019, Uralsky et al. advanced the annotation from the SF-monomer level to individual HOR monomers, developing the HumAS-HMMER tool and simultaneously proposing a systematic HOR naming convention as we mentioned above. The HumAS-HMMER tool itself introduced another methodological innovation: instead of using single Bayesian consensus matrices as PERCON did, it employed profile hidden Markov models (HMMs), allowing each monomer position in a HOR to be represented by a statistical model of the variation observed across multiple sequenced copies. For "divergent" relic HOR arrays — HOR-like structures with 9–15% intra-monomer divergence, representing ancient centromeres never homogenized to modern levels — the tool used multiple sequence alignment (MSA) profiles rather than single-monomer profiles. This allowed the first annotation of what Uralsky et al. termed "dead relic HORs": divergent, degraded remains of actual centromeres of our ancestors.
+
+## The T2T Resolution
+
+The Altemose et al. 2022 paper is the first to apply the αSat classification framework to an assembly in which the centromeric sequences are complete: not probabilistic reference models but actual linear sequence contigs spanning from one chromosome arm to the other. The expansion of the annotation system relative to all prior work is quantitatively substantial. From the five SFs recognized in the early 2000s, the T2T annotation recognizes 20. From the 12 monomer classes of PERCON, the AS-HMMER-SF tool used in the T2T paper recognizes 39. 
+
+The validation criterion for each new SF was stringent: *"Annotation success in both hg38 and CHM13 was confirmed by the fact that, without exception, all SF assignments matched those provided by the Shepelev et al., 2015 PERCON annotation and the assignments made by phylogenetic analysis and manual mapping in Shepelev et al., 2009 and Uralsky et al., 2019"*.
+
+The 2022 paper introduced a fully automated pathway for monomer and HOR inference using the StringDecomposer algorithm and the HORmon pipeline. It outputs same canonical HORs for active arrays. 
 
 # Reference
 
