@@ -33,10 +33,10 @@ Previously, I obtained my M.S. in [Operations Research (OR)](https://www.math.sd
 
 # Research interests
 
-I am interested in developing theories/algorithms/tools for bioinformatics and addressing biological problems via these methods. So, I aim to 
+I am interested in developing theories, algorithms, and practical tools for bioinformatics, with the goal of addressing biological questions. My research is guided by two principles: 
 
-1. Design methods with solid math/algorithms or at least mathematical intuition.
-2. Build practically useful tools with heuristics benefiting the bio/bioinfo communities. 
+1. Developing methods grounded in rigorous mathematics and algorithms, or in clear mathematical intuition. 
+2. Building practically useful tools that incorporate effective heuristics and benefit the bioinformatics community.
 
-Currently, I am working on theories and estimators of mutation and evolutionary processes based on $k$-mers, particularly on repetitive genomic sequences.
+Currently, my research focuses on repetitive genomic sequences from both theoretical and practical perspectives. My theoretical work focuses on the analysis of $k$​-mer behavior under mutation and evolutionary processes, and estimation of the mutation rate. On the practical side, I develop algorithms specifically designed for centromeres, covering tasks such as annotation, variant calling, and sequence alignment.
 
