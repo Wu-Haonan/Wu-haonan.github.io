@@ -1,14 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Wu-Haonan
 
-repo_description_lines_max: 2
+repo_description_lines_max: 4
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Wu-Haonan/Spatom
+  - Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
+  - medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator
