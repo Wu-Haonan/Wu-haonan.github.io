@@ -1,16 +1,23 @@
-<a class="custom-repo-card" href="https://github.com/{{ include.owner }}/{{ include.repo }}">
-  <div class="repo-card-title">
-    <span>{{ include.owner }}/{{ include.repo }}</span>
-  </div>
+<a class="custom-repo-card" href="{{ include.url }}">
+  <div class="repo-card-title">{{ include.full_name }}</div>
 
   <p class="repo-card-description">
     {{ include.description }}
   </p>
 
   <div class="repo-card-meta">
-    <span>{{ include.language }}</span>
+    {% if include.language %}
+      <span>{{ include.language }}</span>
+    {% endif %}
+
     {% if include.stars %}
       <span>☆ {{ include.stars }}</span>
     {% endif %}
+
+    {% if include.stars %}
+      <span>⑂ {{ include.forks }}</span>
+    {% endif %}
+    
   </div>
 </a>
+

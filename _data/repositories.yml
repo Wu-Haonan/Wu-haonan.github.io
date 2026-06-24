@@ -3,7 +3,18 @@ github_users:
 
 repo_description_lines_max: 4
 
-github_repos:
-  - Wu-Haonan/Spatom
-  - Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
-  - medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator
+sections:
+  - title: Repeat-Aware $k$-mer-based Mutation Rate Estimators
+    repos:
+      - medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator
+      - Wu-Haonan/Repeat-Aware_mutation_rate_estimator
+      - Wu-Haonan/Repeat-Aware_phylogenetic_distance_estimator
+
+  - title: Repeat-Robust $k$-mer-based Substitution Rate Estimators
+    repos:
+      - medvedevgroup/Accurate_repeat-aware_kmer_based_estimator
+      - Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
+
+  - title: Protein-Protein Interaction Sites Prediction
+    repos:
+      - Wu-Haonan/Spatom
