@@ -34,7 +34,6 @@ nav_order: 5
 {% endif %}
 {% endif %}
 
-{% if site.data.repositories.github_repos %}
 
 ## GitHub Repositories
 
@@ -44,7 +43,5 @@ nav_order: 5
     owner="medvedevgroup"
     repo="Repeat-Aware_Substitution_Rate_Estimator"
     description="Estimates substitution rate based on k-spectrum analysis."
-    language="C++"
-    stars="9"
   %}
 </div>
