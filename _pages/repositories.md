@@ -12,6 +12,7 @@ nav_order: 5
   {% if section.note %}
     <p class="repo-section-note">{{ section.note }}</p>
   {% endif %}
+
   <div class="repo-grid">
     {% for repo_item in section.repos %}
       {% if repo_item.name %}
@@ -21,7 +22,7 @@ nav_order: 5
         {% assign repo_full_name = repo_item %}
         {% assign repo_note = nil %}
       {% endif %}
-      {% assign repo = site.data.github_repo_metadata[repo_full_name] %}
+      {% assign repo = site.data.github_repo_metadata.repos | where: "full_name", repo_full_name | first %}
       {% include repository/custom_repo_card.liquid
         full_name=repo_full_name
         note=repo_note
