@@ -544,6 +544,45 @@ footer.sticky-bottom {
   }
 }
 
+.repo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.custom-repo-card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    border-color: var(--global-theme-color);
+  }
+}
+
+.repo-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  overflow-wrap: anywhere;
+}
+
+.repo-card-description {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.repo-card-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
 // Blog
 
 .header-bar {
