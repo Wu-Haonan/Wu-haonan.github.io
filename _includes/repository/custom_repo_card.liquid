@@ -1,8 +1,13 @@
-<a class="custom-repo-card" href="{{ include.url }}">
+{% assign repo_url = include.url %}
+{% if repo_url == blank %}
+  {% assign repo_url = include.full_name | prepend: "https://github.com/" %}
+{% endif %}
+
+<a class="custom-repo-card" href="{{ repo_url }}">
   <div class="repo-card-title">{{ include.full_name }}</div>
 
   <p class="repo-card-description">
-    {{ include.description }}
+    {{ include.description | default: "No description provided." }}
   </p>
 
   <div class="repo-card-meta">
@@ -10,14 +15,12 @@
       <span>{{ include.language }}</span>
     {% endif %}
 
-    {% if include.forks %}
-        <span>⑂ {{ include.forks }}</span>
+    {% if include.stars %}
+      <span>☆ {{ include.stars }}</span>
     {% endif %}
 
-    {% if include.stars %}
-      <span>⑂ {{ include.forks }}</span>
+    {% if include.forks %}
+      <span>Forks {{ include.forks }}</span>
     {% endif %}
-    
   </div>
 </a>
-

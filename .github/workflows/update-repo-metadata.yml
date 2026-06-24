@@ -1,0 +1,49 @@
+name: Update repository metadata
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "_data/repositories.yml"
+      - "scripts/update_repo_metadata.py"
+      - ".github/workflows/update-repo-metadata.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_repo_metadata.py
+
+      - name: Commit metadata changes
+        run: |
+          if git diff --quiet -- _data/github_repo_metadata.yml; then
+            echo "No metadata changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/github_repo_metadata.yml
+          git commit -m "Update repository metadata"
+          git push
