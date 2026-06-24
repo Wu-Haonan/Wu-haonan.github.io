@@ -10,7 +10,7 @@ on:
       - master
     paths:
       - "_data/repositories.yml"
-      - "scripts/update_repo_metadata.py"
+      - "_scripts/update_repo_metadata.py"
       - ".github/workflows/update-repo-metadata.yml"
 
 permissions:

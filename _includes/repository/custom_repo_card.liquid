@@ -6,6 +6,12 @@
 <a class="custom-repo-card" href="{{ repo_url }}">
   <div class="repo-card-title">{{ include.full_name }}</div>
 
+  {% if include.note %}
+    <p class="repo-card-note">
+      {{ include.note }}
+    </p>
+  {% endif %}
+
   <p class="repo-card-description">
     {{ include.description | default: "No description provided." }}
   </p>

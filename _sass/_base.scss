@@ -551,6 +551,11 @@ footer.sticky-bottom {
   margin-bottom: 2rem;
 }
 
+.repo-section-note {
+  margin-bottom: 1rem;
+  color: var(--global-text-color-light);
+}
+
 .custom-repo-card {
   display: block;
   padding: 1.25rem;
@@ -574,6 +579,11 @@ footer.sticky-bottom {
 .repo-card-description {
   margin-top: 0.75rem;
   margin-bottom: 1rem;
+}
+
+.repo-card-note {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .repo-card-meta {

@@ -5,16 +5,34 @@ repo_description_lines_max: 4
 
 sections:
   - title: Repeat-Aware $k$-mer-based Mutation Rate Estimators
+    note: >
+      WABI
     repos:
-      - medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator
-      - Wu-Haonan/Repeat-Aware_mutation_rate_estimator
-      - Wu-Haonan/Repeat-Aware_phylogenetic_distance_estimator
+      - name: medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator
+        note: >
+          Add your own note for this repository here.
+      - name: Wu-Haonan/Repeat-Aware_mutation_rate_estimator
+        note: >
+          Add your own note for this repository here.
+      - name: Wu-Haonan/Repeat-Aware_phylogenetic_distance_estimator
+        note: >
+          Add your own note for this repository here.
 
-  - title: Repeat-Robust $k$-mer-based Substitution Rate Estimators
+  - title: Repeat-Robust $k$-mer-based Mutation Rate Estimators
+    note: >
+      ISMB
     repos:
-      - medvedevgroup/Accurate_repeat-aware_kmer_based_estimator
-      - Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
+      - name: medvedevgroup/Accurate_repeat-aware_kmer_based_estimator
+        note: >
+          Add your own note for this repository here.
+      - name: Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
+        note: >
+          Add your own note for this repository here.
 
   - title: Protein-Protein Interaction Sites Prediction
+    note: >
+      BiB
     repos:
-      - Wu-Haonan/Spatom
+      - name: Wu-Haonan/Spatom
+        note: >
+          Add your own note for this repository here.
