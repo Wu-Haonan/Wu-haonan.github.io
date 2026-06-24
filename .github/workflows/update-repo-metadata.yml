@@ -33,7 +33,7 @@ jobs:
       - name: Generate metadata
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_repo_metadata.py
+        run: python _scripts/update_repo_metadata.py
 
       - name: Commit metadata changes
         run: |
