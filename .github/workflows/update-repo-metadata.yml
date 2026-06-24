@@ -37,7 +37,7 @@ jobs:
 
       - name: Commit metadata changes
         run: |
-          if git diff --quiet -- _data/github_repo_metadata.yml; then
+          if [ -z "$(git status --porcelain -- _data/github_repo_metadata.yml)" ]; then
             echo "No metadata changes to commit."
             exit 0
           fi
@@ -47,3 +47,4 @@ jobs:
           git add _data/github_repo_metadata.yml
           git commit -m "Update repository metadata"
           git push
+
