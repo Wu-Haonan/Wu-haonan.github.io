@@ -6,33 +6,32 @@ repo_description_lines_max: 4
 sections:
   - title: Repeat-Aware $k$-mer-based Mutation Rate Estimators
     note: >
-      WABI
+      A repeat-aware $k$-mer-based mutation rate estimator that published in [WABI 2025](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.WABI.2025.20), which needs the abundance histograms of $k$-mers in the reference genome.
     repos:
       - name: medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator
         note: >
-          Add your own note for this repository here.
+          This is the publication repository of our WABI 2025 paper.
       - name: Wu-Haonan/Repeat-Aware_mutation_rate_estimator
         note: >
-          Add your own note for this repository here.
+          This is an improved implementation of the estimator by leveraging KMC and sourmash. 
       - name: Wu-Haonan/Repeat-Aware_phylogenetic_distance_estimator
         note: >
-          Add your own note for this repository here.
+          We extend the estimator to construct Neighbor-Joining (NJ) tree among multiple genomes in parallel.
 
   - title: Repeat-Robust $k$-mer-based Mutation Rate Estimators
     note: >
-      ISMB
+      A repeat-robust $k$-mer-based mutation rate estimator that published in [ISMB 2026](https://www.biorxiv.org/content/10.64898/2026.04.01.715966v1.full)
     repos:
       - name: medvedevgroup/Accurate_repeat-aware_kmer_based_estimator
         note: >
-          Add your own note for this repository here.
+          This is the publication repository of our ISMB 2026 paper.
       - name: Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
         note: >
-          Add your own note for this repository here.
+          This is an improved implementation of the estimator as a sourmash plugin.
 
   - title: Protein-Protein Interaction Sites Prediction
     note: >
-      BiB
+      A structural-based predicting protein-protein interaction sites using the graph neural network.
+      Our tool Spatom is also hosted on the webserver (http://118.190.151.48/Spatom/server)
     repos:
       - name: Wu-Haonan/Spatom
-        note: >
-          Add your own note for this repository here.
