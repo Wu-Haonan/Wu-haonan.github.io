@@ -2,6 +2,50 @@
 # Edit _data/repositories.yml to change the displayed repositories.
 repos:
   -
+    name: "Accurate_repeat-aware_kmer_based_estimator"
+    owner: "medvedevgroup"
+    full_name: "medvedevgroup/Accurate_repeat-aware_kmer_based_estimator"
+    url: "https://github.com/medvedevgroup/Accurate_repeat-aware_kmer_based_estimator"
+    description: "Repeat-aware estimator of mutation rate under whole/sub-sequence mutation mode"
+    homepage: ""
+    language: "C++"
+    stars: 1
+    forks: 0
+    watchers: 1
+    open_issues: 0
+    license: ""
+    topics: []
+    archived: false
+    fork: false
+    pushed_at: "2026-05-20T19:23:18Z"
+    updated_at: "2026-07-10T18:48:29Z"
+    created_at: "2026-01-06T00:48:45Z"
+    default_branch: "main"
+    visibility: "public"
+    size: 9751
+  -
+    name: "sourmash-plugin-repeat-robust-mutation-rate-estimators"
+    owner: "Wu-Haonan"
+    full_name: "Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators"
+    url: "https://github.com/Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators"
+    description: "An improved version of https://github.com/medvedevgroup/Accurate_repeat-aware_kmer_based_estimator"
+    homepage: ""
+    language: "Python"
+    stars: 0
+    forks: 0
+    watchers: 0
+    open_issues: 0
+    license: "MIT"
+    topics: []
+    archived: false
+    fork: false
+    pushed_at: "2026-06-23T02:46:49Z"
+    updated_at: "2026-06-24T23:51:15Z"
+    created_at: "2026-05-14T19:57:40Z"
+    default_branch: "main"
+    visibility: "public"
+    size: 28
+  -
     name: "Repeat-Aware_Substitution_Rate_Estimator"
     owner: "medvedevgroup"
     full_name: "medvedevgroup/Repeat-Aware_Substitution_Rate_Estimator"
@@ -67,50 +111,6 @@ repos:
     default_branch: "main"
     visibility: "public"
     size: 70
-  -
-    name: "Accurate_repeat-aware_kmer_based_estimator"
-    owner: "medvedevgroup"
-    full_name: "medvedevgroup/Accurate_repeat-aware_kmer_based_estimator"
-    url: "https://github.com/medvedevgroup/Accurate_repeat-aware_kmer_based_estimator"
-    description: "Repeat-aware estimator of mutation rate under whole/sub-sequence mutation mode"
-    homepage: ""
-    language: "C++"
-    stars: 1
-    forks: 0
-    watchers: 1
-    open_issues: 0
-    license: ""
-    topics: []
-    archived: false
-    fork: false
-    pushed_at: "2026-05-20T19:23:18Z"
-    updated_at: "2026-07-10T18:48:29Z"
-    created_at: "2026-01-06T00:48:45Z"
-    default_branch: "main"
-    visibility: "public"
-    size: 9751
-  -
-    name: "sourmash-plugin-repeat-robust-mutation-rate-estimators"
-    owner: "Wu-Haonan"
-    full_name: "Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators"
-    url: "https://github.com/Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators"
-    description: "An improved version of https://github.com/medvedevgroup/Accurate_repeat-aware_kmer_based_estimator"
-    homepage: ""
-    language: "Python"
-    stars: 0
-    forks: 0
-    watchers: 0
-    open_issues: 0
-    license: "MIT"
-    topics: []
-    archived: false
-    fork: false
-    pushed_at: "2026-06-23T02:46:49Z"
-    updated_at: "2026-06-24T23:51:15Z"
-    created_at: "2026-05-14T19:57:40Z"
-    default_branch: "main"
-    visibility: "public"
-    size: 28
   -
     name: "Spatom"
     owner: "Wu-Haonan"
