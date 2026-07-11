@@ -4,6 +4,17 @@ github_users:
 repo_description_lines_max: 4
 
 sections:
+  - title: Repeat-Robust $k$-mer-based Mutation Rate Estimators
+    note: >
+      A repeat-robust $k$-mer-based mutation rate estimator that published in [ISMB 2026](https://academic.oup.com/bioinformatics/article/42/Supplement_1/btag234/8726344)
+    repos:
+      - name: medvedevgroup/Accurate_repeat-aware_kmer_based_estimator
+        note: >
+          This is the publication repository of our ISMB 2026 paper.
+      - name: Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
+        note: >
+          This is an improved implementation of the estimator as a sourmash plugin.
+
   - title: Repeat-Aware $k$-mer-based Mutation Rate Estimators
     note: >
       A repeat-aware $k$-mer-based mutation rate estimator that published in [WABI 2025](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.WABI.2025.20), which needs the abundance histograms of $k$-mers in the reference genome.
@@ -17,17 +28,6 @@ sections:
       - name: Wu-Haonan/Repeat-Aware_phylogenetic_distance_estimator
         note: >
           We extend the estimator to construct Neighbor-Joining (NJ) tree among multiple genomes in parallel.
-
-  - title: Repeat-Robust $k$-mer-based Mutation Rate Estimators
-    note: >
-      A repeat-robust $k$-mer-based mutation rate estimator that published in [ISMB 2026](https://www.biorxiv.org/content/10.64898/2026.04.01.715966v1.full)
-    repos:
-      - name: medvedevgroup/Accurate_repeat-aware_kmer_based_estimator
-        note: >
-          This is the publication repository of our ISMB 2026 paper.
-      - name: Wu-Haonan/sourmash-plugin-repeat-robust-mutation-rate-estimators
-        note: >
-          This is an improved implementation of the estimator as a sourmash plugin.
 
   - title: Protein-Protein Interaction Sites Prediction
     note: >
